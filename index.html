@@ -1,13 +1,39 @@
-<!DOCTYPE html>
+<!DOCTYPE
 <html>
 <head>
- <title>Form site</title>
+<title> game to help login|signup</title>
+<link href="css.css"rel="stylesheet"type="text/css"/>
 </head>
 <body>
-<form method="post" action="connect.php">
-Username : <input type="text" name="username"><br><br>
-Password : <input type="password" name="password"><br><br>
-<input type="submit" value="Submit">
-</form>
+<table align="center" style="max-width: 600px" width="100%">
+<tr>
+ <td>
+
+<div class="login">
+  <div class="login-triangle"></div>
+  
+  <h2 class="login-header">Log in</h2>
+
+  <form class="login-container" name="log in">
+    userid<input type="text" placeholder="userid" name="userid"/>
+	password<input type="password" placeholder="password"name="password"/> 
+  <p><input type="submit" onclick="check(this.form)" value="login"/></p>
+  <p><input type="reset" value="reset"/></p>
+  </form>
+</td>
+</tr>
+</table>
+  </div>
+<script language="javascript">
+ function check(form){
+ if(form.userid.value == "gametohelp" && form.password.value == "ece2018"){
+  form.action="link.html"
+}
+else{
+ alert("you have entered wrong password")
+}
+}
+</script> 
+
 </body>
 </html>

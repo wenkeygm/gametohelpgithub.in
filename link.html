@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ 
+    <title>game to help quiz</title>
+    <link href="main.css"rel="stylesheet"type="text/css"/>
+    <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 	<script src="jquery.js"></script>
+    <script src="controller.js"></script>
+
+ 
+</head>
+<body>
+<form id="contact" method="post" enctype="text/plain">
+
+<div id="topbar">MCQ Quiz</div>
+<div class="spacer"></div>
+
+<div id="navContent">
+
+<div id="game1"></div>
+<div id="game2"></div>
+</div>
+<center>
+<div class="hidden" id="id1"><a href="intent://send/+917330732647Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end" class="fa fa-whatsapp"><span class="label"><button onclick="setTimeout(myfunction,3000);"send answers</button></span></a>	</div>
+</center>
+</form>
+<script>
+document.getElementById("id1").style.visibility = "hidden";
+var ua = navigator.userAgent.toLowerCase();
+var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+if(isAndroid) {
+
+document.getElementById("id1").style.visibility = "visible";
+
+
+
+}
+function myfunction() {
+alert('timeout');
+}
+</script>
+
+</body>
+</html>
